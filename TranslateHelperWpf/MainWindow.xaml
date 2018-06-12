@@ -1,0 +1,34 @@
+﻿<Window x:Class="TranslateHelperWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TranslateHelperWpf" 
+        xmlns:localView="clr-namespace:TranslateHelperWpf.Views"  
+        FontSize="10"
+        mc:Ignorable="d"
+        Title="Translate Helper" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <localView:MenuView Grid.Row="0"></localView:MenuView>
+        <localView:FooterView Grid.Row="2"></localView:FooterView>
+
+        <TabControl Grid.Row="1">
+            <TabItem Header="Translate">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <localView:ControlView Grid.Row="0"></localView:ControlView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Log"></TabItem>
+            <TabItem Header="Options"></TabItem>
+        </TabControl>
+    </Grid>
+</Window>

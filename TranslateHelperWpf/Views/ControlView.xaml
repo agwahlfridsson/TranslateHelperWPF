@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="TranslateHelperWpf.Views.ControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TranslateHelperWpf.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Source:" VerticalAlignment="Center" Margin="5,1"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Target:" VerticalAlignment="Center" Margin="5,1"></TextBlock>
+
+        <Border BorderBrush="#FF666666" BorderThickness="0.7" Grid.Row="0" Grid.Column="1" Margin="1">
+            <TextBox Text="{Binding SourceFile}" IsReadOnly="True" BorderBrush="Transparent" Margin="1"></TextBox>
+        </Border>
+        <Border BorderBrush="#FF666666" BorderThickness="0.7" Grid.Row="1" Grid.Column="1" Margin="1">
+            <TextBox Text="{Binding SourceFile}" IsReadOnly="True" BorderBrush="Transparent" Margin="1"></TextBox>
+        </Border>
+
+        <Button Grid.Row="0" Grid.Column="2" Content="Browse..." Padding="5,2" Margin="1"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Content="Browse..." Padding="5,2" Margin="1"></Button>
+    </Grid>
+</UserControl>
