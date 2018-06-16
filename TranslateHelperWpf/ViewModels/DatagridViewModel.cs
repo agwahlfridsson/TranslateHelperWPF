@@ -8,14 +8,26 @@ namespace TranslateHelperWpf.ViewModels
 {
     internal class DatagridViewModel : INotifyPropertyChanged
     {
-        private Dictionary<string, JsonProperty> _jsonDataOrg;
-        private Dictionary<string, JsonProperty> _jsonDataTrans;
-
         public event PropertyChangedEventHandler PropertyChanged;
         public ObservableCollection<DatagridViewItemModel> Items { get; set; }
         public DatagridViewModel()
         {
             Items = new ObservableCollection<DatagridViewItemModel>();
+            ComSite.Instance.OnNewSourceDataSet += Instance_OnNewSourceDataSet;
+            ComSite.Instance.OnNewTargetDataSet += Instance_OnNewTargetDataSet;
         }
+
+        private void Instance_OnNewSourceDataSet()
+        {
+
+        }
+        private void Instance_OnNewTargetDataSet()
+        {
+            foreach (string key in ComSite.Instance.TargetData.Keys)
+            {
+            }
+        }
+
+
     }
 }

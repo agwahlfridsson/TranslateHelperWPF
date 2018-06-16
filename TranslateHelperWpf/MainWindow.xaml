@@ -25,6 +25,7 @@
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <localView:ControlView Grid.Row="0"></localView:ControlView>
+                    <localView:DatagridView Grid.Row="1"></localView:DatagridView>
                 </Grid>
             </TabItem>
             <TabItem Header="Log"></TabItem>

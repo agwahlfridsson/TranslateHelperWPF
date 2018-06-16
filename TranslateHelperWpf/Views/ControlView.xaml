@@ -11,6 +11,7 @@
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -21,13 +22,14 @@
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Target:" VerticalAlignment="Center" Margin="5,1"></TextBlock>
 
         <Border BorderBrush="#FF666666" BorderThickness="0.7" Grid.Row="0" Grid.Column="1" Margin="1">
-            <TextBox Text="{Binding SourceFile}" IsReadOnly="True" BorderBrush="Transparent" Margin="1"></TextBox>
+            <TextBox Text="{Binding SourceFileName}" IsReadOnly="True" BorderBrush="Transparent" Margin="1"></TextBox>
         </Border>
         <Border BorderBrush="#FF666666" BorderThickness="0.7" Grid.Row="1" Grid.Column="1" Margin="1">
-            <TextBox Text="{Binding SourceFile}" IsReadOnly="True" BorderBrush="Transparent" Margin="1"></TextBox>
+            <TextBox Text="{Binding TargetFileName}" IsReadOnly="True" BorderBrush="Transparent" Margin="1"></TextBox>
         </Border>
 
-        <Button Grid.Row="0" Grid.Column="2" Content="Browse..." Padding="5,2" Margin="1"></Button>
-        <Button Grid.Row="1" Grid.Column="2" Content="Browse..." Padding="5,2" Margin="1"></Button>
+        <Button Grid.Row="0" Grid.Column="2" Command="{Binding BrowseSourceFileCommand}" Content="Browse..." Padding="5,2" Margin="1"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Command="{Binding BrowseTargetFileCommand}" Content="Browse..." Padding="5,2" Margin="1"></Button>
+        <Button Grid.Row="1" Grid.Column="3" Command="{Binding BrowseTargetFileCommand}" Content="Save as..." Padding="5,2" Margin="1"></Button>
     </Grid>
 </UserControl>
